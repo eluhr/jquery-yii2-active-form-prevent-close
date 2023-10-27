@@ -7,8 +7,15 @@ composer require eluhr/jquery-yii2-active-form-prevent-close
 ```
 
 ## Example usuage
-```php
-// register asset, then:
 
+```php
+use eluhr\activeFormPreventFromClose\assets\ActiveFormPreventCloseAsset;
+
+// $view must be instance of current context's view component
+ActiveFormPreventCloseAsset::register($view);
+
+// Than you can use this in your js
 $("w0").preventFromClosing()
 ```
+
+As an alternative, the asset can also be used as a dependency of another asset bundle.
